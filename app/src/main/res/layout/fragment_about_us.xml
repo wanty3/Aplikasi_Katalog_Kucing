@@ -14,7 +14,7 @@
         android:layout_margin="16dp"
         android:padding="12dp"
         android:background="?attr/selectableItemBackgroundBorderless"
-        android:contentDescription="Back button"
+        android:contentDescription="@string/back_buttonn"
         android:src="@drawable/baseline_arrow_back_24"
         android:scaleType="fitCenter" />
 
@@ -38,7 +38,7 @@
                 android:textSize="30sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
-                android:text="Anggita Setiawati" />
+                android:text="@string/anggita_setiawati" />
 
             <ImageView
                 android:layout_width="180dp"
@@ -68,7 +68,7 @@
                         android:textSize="20sp"
                         android:textStyle="bold"
                         android:textAlignment="center"
-                        android:text="Detail Profile"/>
+                        android:text="@string/detail_profile"/>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -76,7 +76,7 @@
                         android:layout_marginTop="8dp"
                         android:textColor="@color/white"
                         android:textSize="16sp"
-                        android:text="NIM: 2110031802012"/>
+                        android:text="@string/nim_f55123092"/>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -84,7 +84,7 @@
                         android:layout_marginTop="4dp"
                         android:textColor="@color/white"
                         android:textSize="16sp"
-                        android:text="Program Studi: Teknologi Informasi"/>
+                        android:text="@string/program_studi_teknologi_informasi"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -97,7 +97,7 @@
                 android:textSize="30sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
-                android:text="Sri Aswanti" />
+                android:text="@string/sri_aswanti" />
 
             <ImageView
                 android:layout_width="180dp"
@@ -127,7 +127,7 @@
                         android:textSize="20sp"
                         android:textStyle="bold"
                         android:textAlignment="center"
-                        android:text="Detail Profile"/>
+                        android:text="@string/detail_profilee"/>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -135,7 +135,7 @@
                         android:layout_marginTop="8dp"
                         android:textColor="@color/white"
                         android:textSize="16sp"
-                        android:text="NIM: 2110031802013"/>
+                        android:text="@string/nim_f55123075"/>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -143,7 +143,7 @@
                         android:layout_marginTop="4dp"
                         android:textColor="@color/white"
                         android:textSize="16sp"
-                        android:text="Program Studi: Teknologi Informasi"/>
+                        android:text="@string/program_studi_teknologi_informasi2"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -156,7 +156,7 @@
                 android:textSize="30sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
-                android:text="Rifky" />
+                android:text="@string/muh_rifky"/>
 
             <ImageView
                 android:layout_width="180dp"
@@ -187,7 +187,7 @@
                         android:textSize="20sp"
                         android:textStyle="bold"
                         android:textAlignment="center"
-                        android:text="Detail Profile"/>
+                        android:text="@string/detail_profile3"/>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -195,7 +195,7 @@
                         android:layout_marginTop="8dp"
                         android:textColor="@color/white"
                         android:textSize="16sp"
-                        android:text="NIM: 2110031802014"/>
+                        android:text="@string/nim_f55123091"/>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -203,7 +203,7 @@
                         android:layout_marginTop="4dp"
                         android:textColor="@color/white"
                         android:textSize="16sp"
-                        android:text="Program Studi: Teknologi Informasi"/>
+                        android:text="@string/program_studi_teknologi_informasi3"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 

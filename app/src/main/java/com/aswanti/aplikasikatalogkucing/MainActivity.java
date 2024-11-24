@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
             }
 
             private void switchFragment(Fragment fragment) {
-                // Lakukan perpindahan hanya jika fragment yang dipilih berbeda
                 if (currentFragment == null || !currentFragment.getClass().equals(fragment.getClass())) {
                     currentFragment = fragment;
                     getSupportFragmentManager().beginTransaction()
