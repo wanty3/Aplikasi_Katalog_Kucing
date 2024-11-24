@@ -9,19 +9,20 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="340dp"
-        android:layout_height="146dp"
+        android:layout_height="197dp"
         android:layout_gravity="center"
         android:layout_marginTop="-10dp"
-        app:cardBackgroundColor="@color/ungu_pastel_muda"
         android:alpha="0.7"
+        app:cardBackgroundColor="@color/ungu_pastel_muda"
         app:cardCornerRadius="15dp">
 
         <TextView
             android:id="@+id/adoptDescription"
             android:layout_width="300dp"
-            android:layout_height="wrap_content"
+            android:layout_height="157dp"
             android:layout_gravity="center"
-            android:text="HAI SELAMAT DATANG DI FELINE FACTS\nTERTARIK UNTUK MENGADOPSI KUCING?\nSILAHKAN KLIK TOMBOL DI BAWAH UNTUK MENJELAHINYA"
+            android:gravity="center"
+            android:text="Aplikasi ini berisi daftar berbagai jenis kucing yang memberikan informasi tentang karakteristik, asal usul, dan tips perawatannya\n\nSilahkan klik tombol di bawah untuk menjelajahinya!"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="16sp"
@@ -43,8 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Jelajahi"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="83dp"
+            android:layout_gravity="center"
             android:backgroundTint="@color/ungu_pastel_gelap"
             android:textColor="@color/white"/>
     </androidx.cardview.widget.CardView>

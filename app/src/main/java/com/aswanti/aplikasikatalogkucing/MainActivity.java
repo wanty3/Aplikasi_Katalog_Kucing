@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
                 Fragment selectfragment = null;
                 int itemId = item.getItemId();
                 if (itemId == R.id.nav_home) {
-                    selectfragment = new Fragment();
+                    selectfragment = new HomeFragment(); // Ubah ini dari Fragment() ke HomeFragment()
                 } else if (itemId == R.id.nav_jelajahi_kucing) {
                     selectfragment = new JelajahiKucingFragment();
                 } else if (itemId == R.id.nav_about) {
@@ -46,7 +46,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Set default selection
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.fragment_container, new HomeFragment())
+                    .commit();
+        }
+
         bottomNavigation.setSelectedItemId(R.id.nav_home);
     }
 }
