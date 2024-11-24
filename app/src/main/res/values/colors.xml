@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
+    <color name="black">#000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="ungu_pastel_muda">#DEB2FB</color>
     <color name="ungu_pastel_gelap">#CA82F8</color>
