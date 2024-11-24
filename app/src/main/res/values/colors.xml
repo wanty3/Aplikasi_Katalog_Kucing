@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Warna -->
+    <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="ungu_pastel_muda">#DEB2FB</color>
-    <color name="ungu_pastel_gelap">#CA82F8</color>
+    <color name="ungu_pastel_gelap">#B39DDB</color>
+    <color name="ungu_pastel_muda">#D1C4E9</color>
+
+    <!-- Dimensi -->
+    <dimen name="default_padding">16dp</dimen>
 </resources>

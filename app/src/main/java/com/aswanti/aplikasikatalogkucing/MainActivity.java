@@ -1,52 +1,57 @@
 package com.aswanti.aplikasikatalogkucing;
 
-import android.content.Intent;
 import android.os.Bundle;
-import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import android.view.MenuItem;
-import android.view.View;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 
 public class MainActivity extends AppCompatActivity {
+    BottomNavigationView bottomNavigation;
+    private Fragment currentFragment;  // Menyimpan fragment yang sedang aktif
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        View mainView = findViewById(R.id.main);
-        if (mainView != null) {
-            ViewCompat.setOnApplyWindowInsetsListener(mainView, (v, insets) -> {
-                Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-                v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-                return insets;
-            });
-        }
+        bottomNavigation = findViewById(R.id.bottomNav);
+        bottomNavigation.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                Fragment selectFragment = null;
+                int itemId = item.getItemId();
 
-        BottomNavigationView navView = findViewById(R.id.bottomNav);
-        navView.setOnItemSelectedListener(this::onNavigationItemSelected);
-    }
+                // Menambahkan pengecekan untuk memastikan tombol Home tidak mengganti fragment
+                if (itemId == R.id.nav_home) {
+                    // Jangan melakukan apa-apa saat tombol Home ditekan
+                    return true;  // Tidak ada perpindahan fragment
+                } else if (itemId == R.id.nav_food) {
+                    selectFragment = new FragmentJelajahiKucing();
+                } else if (itemId == R.id.nav_account) {
+                    selectFragment = new AboutUsFragment();
+                }
 
-    private boolean onNavigationItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        if (id == R.id.nav_home) {
-            // Stay in MainActivity
-            return true;
-        } else if (id == R.id.nav_food) {
-            Intent intent = new Intent(this, JelajahiKucingActivity.class);
-            startActivity(intent);
-            return true;
-        } else if (id == R.id.nav_account) {
-            Intent intent = new Intent(this, AboutUsActivity.class);
-            startActivity(intent);
-            return true;
-        }
-        return false;
+                if (selectFragment != null) {
+                    switchFragment(selectFragment);
+                    return true;
+                }
+                return false;
+            }
+
+            private void switchFragment(Fragment fragment) {
+                // Lakukan perpindahan hanya jika fragment yang dipilih berbeda
+                if (currentFragment == null || !currentFragment.getClass().equals(fragment.getClass())) {
+                    currentFragment = fragment;
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.fragment_container, fragment, fragment.getClass().getSimpleName())
+                            .commit();
+                }
+            }
+        });
     }
 }

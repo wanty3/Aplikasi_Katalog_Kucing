@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeFragment"
+    tools:context=".SplashScreenActivity"
     android:background="@color/white">
 
     <ImageView
@@ -12,7 +12,5 @@
         android:layout_gravity="center"
         android:layout_marginTop="-25dp"
         android:src="@drawable/logo" />
-
-    <!-- Continue with your existing TextViews -->
 
 </FrameLayout>
