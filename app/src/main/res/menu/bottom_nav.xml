@@ -7,13 +7,13 @@
         android:iconTint="@color/ungu_pastel_gelap"/>
 
     <item
-        android:id="@+id/nav_food"
+        android:id="@+id/nav_jelajahi_kucing"
         android:icon="@drawable/baseline_pets_24"
         android:title="Jelajahi Kucing"
         android:iconTint="@color/ungu_pastel_gelap" />
 
     <item
-        android:id="@+id/nav_account"
+        android:id="@+id/nav_about"
         android:icon="@drawable/baseline_people_24"
         android:title="About Us"
         android:iconTint="@color/ungu_pastel_gelap"/>
