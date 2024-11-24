@@ -13,31 +13,6 @@
         android:id="@+id/fragment_container"
         android:layout_above="@id/bottomNav">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="-10dp"
-            android:elevation="8dp"
-            android:fontFamily="cursive"
-            android:letterSpacing="0.08"
-            android:rotationX="10"
-            android:text="@string/kenali_dan_cintai_nkucing_lebih_dekat"
-            android:textColor="#FF6B6B"
-            android:textSize="35sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="60dp"
-            android:elevation="8dp"
-            android:fontFamily="cursive"
-            android:letterSpacing="0.08"
-            android:rotationX="10"
-            android:text="@string/welcome"
-            android:textColor="#FF6B6B"
-            android:textSize="35dp" />
     </FrameLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
