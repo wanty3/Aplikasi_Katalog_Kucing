@@ -8,4 +8,9 @@
 
     <!-- Dimensi -->
     <dimen name="default_padding">16dp</dimen>
+
+    <color name="purple_theme">#9C27B0</color>
+    <color name="text_dark">#424242</color>
+    <color name="text_light">#757575</color>
+    <color name="background_light">#F5F5F5</color>
 </resources>

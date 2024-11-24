@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5F5F5">
+    android:background="@color/background_light">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,7 +17,7 @@
             android:layout_margin="16dp"
             app:cardCornerRadius="16dp"
             app:cardElevation="4dp"
-            app:cardBackgroundColor="#9C27B0">
+            app:cardBackgroundColor="@color/purple_theme">
 
             <TextView
                 android:id="@+id/catName"
@@ -43,7 +43,8 @@
                 android:id="@+id/catImage"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:scaleType="centerCrop"/>
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/cd_cat_image"/>
         </androidx.cardview.widget.CardView>
 
         <!-- Card Informasi -->
@@ -64,20 +65,20 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Tentang"
+                    android:text="@string/header_about"
                     android:textSize="24sp"
                     android:textStyle="bold"
-                    android:textColor="#9C27B0"
+                    android:textColor="@color/purple_theme"
                     android:layout_marginBottom="16dp"/>
 
                 <!-- Deskripsi -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Deskripsi"
+                    android:text="@string/header_description"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:textColor="#424242"/>
+                    android:textColor="@color/text_dark"/>
 
                 <TextView
                     android:id="@+id/catDescription"
@@ -86,16 +87,16 @@
                     android:layout_marginTop="4dp"
                     android:layout_marginBottom="16dp"
                     android:textSize="16sp"
-                    android:textColor="#757575"/>
+                    android:textColor="@color/text_light"/>
 
                 <!-- Asal -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Asal"
+                    android:text="@string/header_origin"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:textColor="#424242"/>
+                    android:textColor="@color/text_dark"/>
 
                 <TextView
                     android:id="@+id/catOrigin"
@@ -104,16 +105,16 @@
                     android:layout_marginTop="4dp"
                     android:layout_marginBottom="16dp"
                     android:textSize="16sp"
-                    android:textColor="#757575"/>
+                    android:textColor="@color/text_light"/>
 
                 <!-- Tips Perawatan -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tips Perawatan"
+                    android:text="@string/header_care_tips"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:textColor="#424242"/>
+                    android:textColor="@color/text_dark"/>
 
                 <LinearLayout
                     android:id="@+id/tipsContainer"
@@ -126,28 +127,28 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:drawablePadding="8dp"
-                        android:textColor="#757575"
+                        android:textColor="@color/text_light"
                         android:textSize="16sp"
                         android:layout_marginBottom="8dp"
-                        android:text="Sikatlah bulu kucing secara rutin"/>
+                        android:text="@string/tip_grooming"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:drawablePadding="8dp"
-                        android:textColor="#757575"
+                        android:textColor="@color/text_light"
                         android:textSize="16sp"
                         android:layout_marginBottom="8dp"
-                        android:text="Berikan makanan berkualitas tinggi"/>
+                        android:text="@string/tip_food"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:drawablePadding="8dp"
-                        android:textColor="#757575"
+                        android:textColor="@color/text_light"
                         android:textSize="16sp"
                         android:layout_marginBottom="8dp"
-                        android:text="Periksa kesehatan secara rutin"/>
+                        android:text="@string/tip_health"/>
 
                 </LinearLayout>
             </LinearLayout>
@@ -160,7 +161,7 @@
             android:layout_margin="16dp"
             app:cardCornerRadius="16dp"
             app:cardElevation="4dp"
-            app:cardBackgroundColor="#9C27B0">
+            app:cardBackgroundColor="@color/purple_theme">
 
             <ImageButton
                 android:id="@+id/backButton"
@@ -168,6 +169,7 @@
                 android:layout_height="48dp"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:src="@drawable/baseline_arrow_back_24"
+                android:contentDescription="@string/cd_back_button"
                 app:tint="@android:color/white" />
 
         </androidx.cardview.widget.CardView>

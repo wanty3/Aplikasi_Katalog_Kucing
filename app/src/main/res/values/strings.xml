@@ -1,3 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Aplikasi Katalog Kucing</string>
+    <!-- Headers -->
+    <string name="header_about">Tentang</string>
+    <string name="header_description">Deskripsi</string>
+    <string name="header_origin">Asal</string>
+    <string name="header_care_tips">Tips Perawatan</string>
+    <!-- Tips -->
+    <string name="tip_grooming">Sikatlah bulu kucing secara rutin</string>
+    <string name="tip_food">Berikan makanan berkualitas tinggi</string>
+    <string name="tip_health">Periksa kesehatan secara rutin</string>
+    <!-- Content Descriptions -->
+    <string name="cd_cat_image">Gambar Kucing</string>
+    <string name="cd_back_button">Tombol Kembali</string>
+    <string name="app_name">app_name\n</string>
+    <string name="kenali_dan_cintai_nkucing_lebih_dekat">Kenali dan Cintai Kucing Lebih dekat</string>
+    <string name="welcome">Welcome\t</string>
 </resources>
