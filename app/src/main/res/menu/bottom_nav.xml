@@ -3,16 +3,19 @@
     <item
         android:id="@+id/nav_home"
         android:icon="@drawable/baseline_home_24"
-        android:title="Home"/>
+        android:title="Home"
+        android:iconTint="@color/ungu_pastel_gelap"/>
 
     <item
         android:id="@+id/nav_food"
         android:icon="@drawable/baseline_pets_24"
-        android:title="Jelajahi Kucing"/>
+        android:title="Jelajahi Kucing"
+        android:iconTint="@color/ungu_pastel_gelap" />
 
     <item
         android:id="@+id/nav_account"
         android:icon="@drawable/baseline_people_24"
-        android:title="About Us"/>
+        android:title="About Us"
+        android:iconTint="@color/ungu_pastel_gelap"/>
 
 </menu>
