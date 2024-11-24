@@ -3,6 +3,7 @@ package com.aswanti.aplikasikatalogkucing;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
 import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -15,14 +16,24 @@ public class ListCats extends AppCompatActivity {
     private EditText searchEdit;
     private CatAdapter adapter;
     private List<Cat> catList;
+    private View btnBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_cats);
 
-        recyclerView = findViewById(R.id.recyclerView); // Ganti ListView dengan RecyclerView di layout
+        recyclerView = findViewById(R.id.recyclerView);
         searchEdit = findViewById(R.id.searchEdit);
+        btnBack = findViewById(R.id.btnBack);
+
+        // Setup tombol back
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         initializeCatList();
         setupRecyclerView();
@@ -37,6 +48,18 @@ public class ListCats extends AppCompatActivity {
         catList.add(new Cat("Kucing Birman",
                 "Kucing birma adalah salah satu ras kucing alami yang berasal dari Prancis.",
                 R.drawable.kucing_birman));
+        catList.add(new Cat("Kucing Britania",
+                "Kucing bulu pendek britania adalah salah satu ras kucing tertua yang nenek moyang.",
+                R.drawable.kucing_bulu_pendek_britania));
+        catList.add(new Cat("Kucing Maineecoon",
+                "Maine coon adalah salah satu ras kucing tertua dan alami yang berasal dari Maine.",
+                R.drawable.kucing_maine_coon));
+        catList.add(new Cat("Kucing Munchkin",
+                "Kucing munchkin adalah salah satu ras kucing berkaki pendek yang terbentuk karena mutasi genetik alami.",
+                R.drawable.kucing_munchkin));
+        catList.add(new Cat("Kucing Anggora",
+                "Anggora turki adalah salah satu ras kucing domestik alami tertua.",
+                R.drawable.kucin_anggora));
     }
 
     private void setupRecyclerView() {
@@ -63,5 +86,13 @@ public class ListCats extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable s) {}
         });
+    }
+
+    public View getBtnBack() {
+        return btnBack;
+    }
+
+    public void setBtnBack(View btnBack) {
+        this.btnBack = btnBack;
     }
 }

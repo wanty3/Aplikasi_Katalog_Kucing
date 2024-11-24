@@ -1,5 +1,6 @@
 package com.aswanti.aplikasikatalogkucing;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,17 +13,18 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
 public class JelajahiKucingFragment extends Fragment {
-
-    @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_jelajahi_kucing, container, false);
 
-        // Handle the explore button click
-        Button btnExplore = view.findViewById(R.id.btnExplore);
-        btnExplore.setOnClickListener(v -> {
-            // Add your navigation or action code here
+        Button btnJelajahi = view.findViewById(R.id.btnExplore);
+        btnJelajahi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Buat Intent untuk membuka ListCatsActivity
+                Intent intent = new Intent(getActivity(), ListCats.class);
+                startActivity(intent);
+            }
         });
 
         return view;
