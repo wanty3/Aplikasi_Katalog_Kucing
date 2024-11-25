@@ -28,7 +28,7 @@ Aplikasi Android untuk menampilkan informasi berbagai ras kucing dengan fitur pe
 ![Jelajahi Kucing](screenshots/jelajahi_kucing.png)
 
 ### Tampilan About Us
-![About Us](screenshots/about_us.png)
+![About Us](shttps://github.com/wanty3/Aplikasi_Katalog_Kucing/blob/main/app/screenshoots/about_us.png)
 
 ### Tampilan List Kucing
 ![List Kucing](screenshots/list_kucing.png)
