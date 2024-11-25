@@ -19,7 +19,7 @@ Aplikasi Android untuk menampilkan informasi berbagai ras kucing dengan fitur pe
 ## Berikut Tampilan dari hasil projek yang telah kami buat:
 
 ### Tampilan Spalsh Screen
-![alt text](screenshots/splash_screen.png?raw=true)
+![splash_screen](shttps://github.com/wanty3/Aplikasi_Katalog_Kucing/blob/main/app/screenshoots/splash_screen.png)
 
 ### Tampilan Home
 ![Home Screen](https://github.com/wanty3/Aplikasi_Katalog_Kucing/blob/main/app/screenshoots/home.png)
