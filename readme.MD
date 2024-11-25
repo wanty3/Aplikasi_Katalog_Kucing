@@ -19,7 +19,7 @@ Aplikasi Android untuk menampilkan informasi berbagai ras kucing dengan fitur pe
 ## Berikut Tampilan dari hasil projek yang telah kami buat:
 
 ### Tampilan Spalsh Screen
-![Splash Screen](screenshots/splash_screen.png)
+![alt text](screenshots/splash_screen.png?raw=true)
 
 ### Tampilan Home
 ![Home Screen](screenshots/home.png)
