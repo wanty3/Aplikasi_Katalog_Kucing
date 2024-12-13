@@ -10,7 +10,7 @@
         android:layout_height="100dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="32dp"
-        android:src="@drawable/logo" />
+        android:src="@drawable/logobaru_nobg" />
 
     <EditText
         android:id="@+id/et_username"
