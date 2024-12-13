@@ -68,8 +68,13 @@ public class ListCats extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
 
         adapter.setOnItemClickListener(cat -> {
-            // Handle item click
-            // Misalnya buka DetailActivity
+            // Create and show DetailCatActivity fragment
+            DetailCatActivity detailFragment = DetailCatActivity.newInstance(cat);
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(android.R.id.content, detailFragment)
+                    .addToBackStack(null)
+                    .commit();
         });
     }
 

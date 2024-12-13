@@ -1,23 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Aplikasi Katalog Kucing</string>
-    <string name="back_button">Back button</string>
-    <string name="adopt_description">HAI SELAMAT DATANG DI FELINE FACTS\nTERTARIK UNTUK MENGADOPSI KUCING?\nSILAHKAN KLIK TOMBOL DI BAWAH UNTUK MENJELAHINYA</string>
-    <string name="explore_button">Jelajahi</string>
-    <string name="welcome_text">Welcome</string>
-    <string name="home_text">Kenali Dan Cintai\nKucing Lebih Dekat</string>
-    <string name="kenali_dan_cintai_nkucing_lebih_dekat">Kenali Dan Cintai\nKucing Lebih Dekat</string>
-    <string name="welcome">Welcome</string>
-    <string name="back_buttonn">Back button</string>
-    <string name="anggita_setiawati">Anggita Setiawati</string>
-    <string name="detail_profile">Detail Profile</string>
-    <string name="nim_f55123092">NIM: F55123092</string>
-    <string name="program_studi_teknologi_informasi">Program Studi: Teknologi Informasi</string>
-    <string name="sri_aswanti">Sri Aswanti</string>
-    <string name="detail_profilee">Detail Profile</string>
-    <string name="nim_f55123075">NIM: f55123075</string>
-    <string name="program_studi_teknologi_informasi2">Program Studi: Teknologi Informasi</string>
-    <string name="muh_rifky">Muh. Rifky</string>
-    <string name="detail_profile3">Detail Profile</string>
-    <string name="nim_f55123091">NIM: F55123091</string>
-    <string name="program_studi_teknologi_informasi3">Program Studi: Teknologi Informasi</string>
+    <!-- Headers -->
+    <string name="header_about">Tentang</string>
+    <string name="header_description">Deskripsi</string>
+    <string name="header_origin">Asal</string>
+    <string name="header_care_tips">Tips Perawatan</string>
+    <!-- Tips -->
+    <string name="tip_grooming">Sikatlah bulu kucing secara rutin</string>
+    <string name="tip_food">Berikan makanan berkualitas tinggi</string>
+    <string name="tip_health">Periksa kesehatan secara rutin</string>
+    <!-- Content Descriptions -->
+    <string name="cd_cat_image">Gambar Kucing</string>
+    <string name="cd_back_button">Tombol Kembali</string>
+    <string name="app_name">app_name\n</string>
+    <string name="kenali_dan_cintai_nkucing_lebih_dekat">Kenali dan Cintai Kucing Lebih dekat</string>
+    <string name="welcome">Welcome\t</string>
 </resources>
