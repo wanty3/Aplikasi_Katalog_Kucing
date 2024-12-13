@@ -9,7 +9,6 @@ android {
     defaultConfig {
         applicationId = "com.aswanti.aplikasikatalogkucing"
         minSdk = 21
-        //noinspection OldTargetApi
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
