@@ -5,6 +5,7 @@
     <color name="black">#000000</color>
     <color name="ungu_pastel_gelap">#B39DDB</color>
     <color name="ungu_pastel_muda">#D1C4E9</color>
+    <color name="pinkBtn">#FFC3EA</color>
 
     <!-- Dimensi -->
     <dimen name="default_padding">16dp</dimen>
