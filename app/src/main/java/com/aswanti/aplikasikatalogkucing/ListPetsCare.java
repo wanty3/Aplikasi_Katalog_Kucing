@@ -43,24 +43,24 @@ public class ListPetsCare extends AppCompatActivity {
 
     private void initializeCatList() {
         catList = new ArrayList<>();
-        catList.add(new Cat("Kucing Burmilla",
-                "Burmilla adalah salah satu ras kucing yang terbentuk dari persilangan antara kucing burma dengan chinchilla. Sebenarnya ada 2 jenis burmilla, yaitu kucing bulu panjang burmilla dan ku[...]",
-                R.drawable.kucing_burmila));
-        catList.add(new Cat("Kucing Birman",
-                "Kucing birma adalah salah satu ras kucing alami yang berasal dari Prancis.",
-                R.drawable.kucing_birman));
-        catList.add(new Cat("Kucing Britania",
-                "Kucing bulu pendek britania adalah salah satu ras kucing tertua yang nenek moyang.",
-                R.drawable.kucing_bulu_pendek_britania));
-        catList.add(new Cat("Kucing Maineecoon",
-                "Maine coon adalah salah satu ras kucing tertua dan alami yang berasal dari Maine.",
-                R.drawable.kucing_maine_coon));
-        catList.add(new Cat("Kucing Munchkin",
-                "Kucing munchkin adalah salah satu ras kucing berkaki pendek yang terbentuk karena mutasi genetik alami.",
-                R.drawable.kucing_munchkin));
-        catList.add(new Cat("Kucing Anggora",
-                "Anggora turki adalah salah satu ras kucing domestik alami tertua.",
-                R.drawable.kucin_anggora));
+        catList.add(new Cat("Memandikan Kucing",
+                "Proses mandi yang tepat akan membersihkan kotoran, kuman, dan minyak berlebih yang ada di bulu dan kulit kucing. Mandi juga dapat membantu menjaga kebersihan kulit[...]",
+                R.drawable.mandikan_kucing));
+        catList.add(new Cat("Potong kuku",
+                "Menjaga kuku kucing tetap pendek tidak hanya penting untuk mencegah kerusakan furnitur atau permukaan lainnya....",
+                R.drawable.potong_kuku));
+        catList.add(new Cat("Pembersihan Telinga ",
+                " Pembersihan telinga secara teratur sangat penting untuk mencegah infeksi telinga pada kucing, terutama bagi ras yang rentan.....",
+                R.drawable.pembersihan_telinga));
+        catList.add(new Cat("Potong dan Rapikan Bulu",
+                "  Kucing dapat mengalami masalah mata seperti kotoran atau air mata yang mengering di....",
+                R.drawable.potong_dan_rapikan));
+        catList.add(new Cat("Pembersih gigi",
+                " Kesehatan gigi sangat penting untuk kucing, karena masalah gigi dan gusi dapat menyebabkan nyeri atau bahkan penyakit sistemik..",
+                R.drawable.pembersihan_gigi));
+        catList.add(new Cat("Pemeriksaan Kutu dan Parasit",
+                "   Kutu dan parasit lainnya, seperti caplak atau cacing, dapat menyebabkan ketidaknyamanan bagi kucing dan dapat membawa penyakit.....",
+                R.drawable.pemeriksaan_kutu));
     }
 
     private void setupRecyclerView() {

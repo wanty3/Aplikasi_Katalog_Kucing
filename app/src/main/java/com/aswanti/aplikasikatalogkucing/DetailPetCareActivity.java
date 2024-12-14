@@ -19,9 +19,7 @@ public class DetailPetCareActivity extends AppCompatActivity {
 
         // Set back button click listener
         backButton.setOnClickListener(v -> {
-            if (getActivity() != null) {
-                getActivity().getSupportFragmentManager().popBackStack();
-            }
+            finish();
         });
 
         // Get data from Intent
