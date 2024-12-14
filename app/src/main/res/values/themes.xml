@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.AplikasiKatalogKucing" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+<!--        <item name="colorPrimary">@color/my_light_primary</item> &lt;!&ndash; Uncomment and customize as needed &ndash;&gt;-->
     </style>
 
     <style name="Theme.AplikasiKatalogKucing" parent="Base.Theme.AplikasiKatalogKucing" />
