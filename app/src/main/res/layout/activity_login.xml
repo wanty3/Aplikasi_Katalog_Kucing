@@ -8,8 +8,8 @@
     tools:context=".LoginActivity">
 
     <ImageView
-        android:layout_width="128dp"
-        android:layout_height="127dp"
+        android:layout_width="245dp"
+        android:layout_height="172dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="32dp"
         android:src="@drawable/logobaru_nobg" />

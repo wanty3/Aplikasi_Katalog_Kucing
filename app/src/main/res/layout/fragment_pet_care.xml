@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/white"
-    tools:context=".JelajahiKucingFragment">
+    tools:context=".PetCareFragment">
 
     <!-- Logo (Tetap di atas) -->
     <ImageView
@@ -28,19 +28,20 @@
         <!-- CardView for Description -->
         <androidx.cardview.widget.CardView
             android:layout_width="340dp"
-            android:layout_height="197dp"
+            android:layout_height="117dp"
             android:layout_gravity="center"
             android:alpha="0.7"
             app:cardBackgroundColor="@color/ungu_pastel_muda"
             app:cardCornerRadius="15dp">
 
             <TextView
-                android:id="@+id/adoptDescription"
+                android:id="@+id/petCareDescription"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:padding="16dp"
-                android:text="Aplikasi ini berisi daftar berbagai jenis kucing yang memberikan informasi tentang karakteristik, asal usul, dan tips perawatannya\n\nSilahkan klik tombol di bawah untuk menjelajahinya!"
+                android:text="Silahkan klik tombol dibawah untuk melihat jenis
+perawatan!"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="16sp"
@@ -57,11 +58,11 @@
             app:cardElevation="0dp">
 
             <Button
-                android:id="@+id/btnExplore"
+                android:id="@+id/btnNext"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="100dp"
-                android:text="Jelajahi"
+                android:layout_marginBottom="90dp"
+                android:text="Next"
                 android:backgroundTint="@color/ungu_pastel_gelap"
                 android:textColor="@color/white" />
         </androidx.cardview.widget.CardView>
