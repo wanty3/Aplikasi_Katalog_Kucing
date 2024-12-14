@@ -2,41 +2,49 @@ package com.aswanti.aplikasikatalogkucing;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class LoginActivity extends AppCompatActivity {
-    private FirebaseAuth mAuth;
+
     private EditText etUsername, etPassword;
     private Button btnLogin;
-    TextView tvRegister = findViewById(R.id.tv_register);
+    private DatabaseReference database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_login);  // Pastikan nama layout sesuai
 
-        mAuth = FirebaseAuth.getInstance();
         etUsername = findViewById(R.id.et_username);
         etPassword = findViewById(R.id.et_password);
         btnLogin = findViewById(R.id.btn_login);
 
+        database = FirebaseDatabase.getInstance().getReference("users");
+
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loginUser();
+                String username = etUsername.getText().toString();
+                String password = etPassword.getText().toString();
+
+                if (username.isEmpty() || password.isEmpty()) {
+                    Toast.makeText(LoginActivity.this, "Username atau password tidak boleh kosong", Toast.LENGTH_SHORT).show();
+                } else {
+                    // Verifikasi login dengan Firebase Realtime Database
+                    verifyLogin(username, password);
+                }
             }
         });
 
@@ -44,32 +52,35 @@ public class LoginActivity extends AppCompatActivity {
         tvRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
+                Intent register = new Intent(getApplicationContext(), RegisterActivity.class);
+                startActivity(register);
             }
         });
     }
 
-    private void loginUser() {
-        String email = etUsername.getText().toString().trim();
-        String password = etPassword.getText().toString().trim();
-
-        if (TextUtils.isEmpty(email) || TextUtils.isEmpty(password)) {
-            Toast.makeText(LoginActivity.this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-        mAuth.signInWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) { // Perbaikan pada anotasi @Override
-                        if (task.isSuccessful()) {
-                            // Login success
-                            startActivity(new Intent(LoginActivity.this, MainActivity.class));
-                            finish();
-                        } else {
-                            Toast.makeText(LoginActivity.this, "Authentication Failed.", Toast.LENGTH_SHORT).show();
-                        }
+    private void verifyLogin(final String username, final String password) {
+        database.child(username).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()) {
+                    String storedPassword = dataSnapshot.child("password").getValue(String.class);
+                    if (storedPassword != null && storedPassword.equals(password)) {
+                        // Login berhasil, arahkan ke MainActivity
+                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                        startActivity(intent);
+                        finish();  // Tutup activity login agar tidak bisa kembali
+                    } else {
+                        Toast.makeText(LoginActivity.this, "Password salah", Toast.LENGTH_SHORT).show();
                     }
-                });
+                } else {
+                    Toast.makeText(LoginActivity.this, "Username tidak ditemukan", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                Toast.makeText(LoginActivity.this, "Gagal mengakses database", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }
