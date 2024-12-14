@@ -38,6 +38,8 @@
         <activity
             android:name=".ListCats"
             android:exported="false" />
+        <activity android:name=".ListPetsCare" />
+        <activity android:name=".DetailPetCareActivity" />
     </application>
 
 </manifest>

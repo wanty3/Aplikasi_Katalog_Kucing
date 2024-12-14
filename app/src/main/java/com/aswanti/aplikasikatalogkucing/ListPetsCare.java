@@ -1,5 +1,6 @@
 package com.aswanti.aplikasikatalogkucing;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -43,7 +44,7 @@ public class ListPetsCare extends AppCompatActivity {
     private void initializeCatList() {
         catList = new ArrayList<>();
         catList.add(new Cat("Kucing Burmilla",
-                "Burmilla adalah salah satu ras kucing yang terbentuk dari persilangan antara kucing burma dengan chinchilla. Sebenarnya ada 2 jenis burmilla, yaitu kucing bulu panjang burmilla dan kucing bulu pendek Burmilla.",
+                "Burmilla adalah salah satu ras kucing yang terbentuk dari persilangan antara kucing burma dengan chinchilla. Sebenarnya ada 2 jenis burmilla, yaitu kucing bulu panjang burmilla dan ku[...]",
                 R.drawable.kucing_burmila));
         catList.add(new Cat("Kucing Birman",
                 "Kucing birma adalah salah satu ras kucing alami yang berasal dari Prancis.",
@@ -68,13 +69,11 @@ public class ListPetsCare extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
 
         adapter.setOnItemClickListener(cat -> {
-            // Create and show DetailCatActivity fragment
-            DetailCatActivity detailFragment = DetailCatActivity.newInstance(cat);
-            getSupportFragmentManager()
-                    .beginTransaction()
-                    .replace(android.R.id.content, detailFragment)
-                    .addToBackStack(null)
-                    .commit();
+            Intent intent = new Intent(ListPetsCare.this, DetailPetCareActivity.class);
+            intent.putExtra("cat_name", cat.getName());
+            intent.putExtra("cat_description", cat.getDescription());
+            intent.putExtra("cat_image", cat.getImageResourceId());
+            startActivity(intent);
         });
     }
 
