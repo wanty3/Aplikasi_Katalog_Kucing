@@ -13,6 +13,12 @@
         android:iconTint="@color/ungu_pastel_gelap" />
 
     <item
+        android:id="@+id/nav_pet_care"
+        android:icon="@drawable/baseline_pet_care_24"
+        android:title="Pet Care"
+        android:iconTint="@color/ungu_pastel_gelap" />
+
+    <item
         android:id="@+id/nav_about"
         android:icon="@drawable/baseline_people_24"
         android:title="About Us"

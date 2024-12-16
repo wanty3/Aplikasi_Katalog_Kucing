@@ -1,24 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/white"
     tools:context=".HomeFragment">
 
-    <!-- Container untuk mengelompokkan TextView -->
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <!-- Gambar Logo di atas -->
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="245dp"
+        android:layout_height="172dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/logobaru_nobg" />
 
+    <!-- Wrapper untuk konten tengah -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="507dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- Judul -->
         <TextView
             android:id="@+id/tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
             android:elevation="8dp"
             android:fontFamily="cursive"
             android:gravity="center"
@@ -27,16 +39,14 @@
             android:text="@string/kenali_dan_cintai_nkucing_lebih_dekat"
             android:textAlignment="center"
             android:textColor="#FF6B6B"
-            android:textSize="35sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:textSize="35sp" />
 
+        <!-- Teks Selamat Datang -->
         <TextView
             android:id="@+id/tv_welcome"
+            android:layout_marginBottom="100dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
             android:elevation="8dp"
             android:fontFamily="cursive"
             android:gravity="center"
@@ -45,11 +55,7 @@
             android:text="@string/welcome"
             android:textAlignment="center"
             android:textColor="#FF6B6B"
-            android:textSize="35sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_title" />
+            android:textSize="30sp" />
+    </LinearLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

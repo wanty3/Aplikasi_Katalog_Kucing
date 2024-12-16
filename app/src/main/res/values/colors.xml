@@ -6,6 +6,7 @@
     <color name="ungu_pastel_gelap">#B39DDB</color>
     <color name="ungu_pastel_muda">#D1C4E9</color>
     <color name="pinkBtn">#FFC3EA</color>
+    <color name="inputColor">#D9D9D9</color>
 
     <!-- Dimensi -->
     <dimen name="default_padding">16dp</dimen>

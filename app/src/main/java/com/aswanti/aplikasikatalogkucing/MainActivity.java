@@ -12,7 +12,6 @@ import com.google.android.material.navigation.NavigationBarView;
 
 import com.google.firebase.FirebaseApp;
 
-
 public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigation;
 
@@ -34,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
                     selectfragment = new JelajahiKucingFragment();
                 } else if (itemId == R.id.nav_about) {
                     selectfragment = new AboutUsFragment();
+                } else if (itemId == R.id.nav_pet_care) {  // Tambahkan kondisi baru untuk PetCareFragment
+                    selectfragment = new PetCareFragment();
                 }
 
                 if (selectfragment != null) {

@@ -4,7 +4,7 @@
     <string name="header_about">Tentang</string>
     <string name="header_description">Deskripsi</string>
     <string name="header_origin">Asal</string>
-    <string name="header_care_tips">Tips Perawatan</string>
+    <string name="header_care_tips">Tips Perawatann</string>
     <!-- Tips -->
     <string name="tip_grooming">Sikatlah bulu kucing secara rutin</string>
     <string name="tip_food">Berikan makanan berkualitas tinggi</string>
@@ -15,4 +15,7 @@
     <string name="app_name">app_name\n</string>
     <string name="kenali_dan_cintai_nkucing_lebih_dekat">Kenali dan Cintai Kucing Lebih dekat</string>
     <string name="welcome">Welcome\t</string>
+    <string name="hubungi_jasa">Hubungi Jasa</string>
+    <string name="whatsaapp_085219094122">WhatsaApp: 085219094122</string>
+    <string name="instagram_ang_ang">Instagram: @ang_ang</string>
 </resources>

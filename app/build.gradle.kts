@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
-    id("com.google.gms.google-services")
+    alias(libs.plugins.google.gms.google.services)
+//    id("com.google.gms.google-services")
 }
 
 android {
@@ -9,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId = "com.aswanti.aplikasikatalogkucing"
-        minSdk = 21
+        minSdk = 23
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -33,8 +34,8 @@ android {
 }
 
 dependencies {
-    implementation(libs.firebase.auth)
-    implementation(libs.firebase.database)
+//    implementation(libs.firebase.auth)
+//    implementation(libs.firebase.database)
     implementation(libs.androidx.recyclerview)
     implementation(libs.navigation.fragment.ktx)
     implementation(libs.navigation.ui.ktx)
@@ -43,9 +44,11 @@ dependencies {
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
+    implementation(libs.firebase.database)
+    implementation(libs.firebase.auth)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
 }
 
-apply(plugin = "com.google.gms.google-services")
+//apply(plugin = "com.google.gms.google-services")

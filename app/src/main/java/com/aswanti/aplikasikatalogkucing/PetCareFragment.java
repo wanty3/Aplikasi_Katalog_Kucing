@@ -6,24 +6,25 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageButton;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import androidx.navigation.fragment.NavHostFragment;
 
-public class JelajahiKucingFragment extends Fragment {
+import androidx.fragment.app.Fragment;
+
+public class PetCareFragment extends Fragment {
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_jelajahi_kucing, container, false);
+        // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment_pet_care, container, false);
 
-        Button btnJelajahi = view.findViewById(R.id.btnExplore);
-        btnJelajahi.setOnClickListener(new View.OnClickListener() {
+        // Inisialisasi tombol setelah layout diinflasi
+        Button btnNext = view.findViewById(R.id.btnNext);
+
+        btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Buat Intent untuk membuka ListCatsActivity
-                Intent listcats = new Intent(getActivity(), ListCats.class);
-                startActivity(listcats);
+                Intent listpetscare = new Intent(getActivity(), ListPetsCare.class);
+                startActivity(listpetscare);
             }
         });
 
